@@ -2,11 +2,20 @@ package com.Model;
 
 public class User {
 	private String username;
+	private String name;
 	private String email;
 	private String password;
-	public User(String username, String email, String password) {
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public User(String username, String name, String email, String password) {
 		super();
 		this.username = username;
+		this.name = name;
 		this.email = email;
 		this.password = password;
 	}

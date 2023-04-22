@@ -1,23 +1,27 @@
 package com.Contoller;
+import com.Dao.*;
 import com.Model.*;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.Dao.*;
-/**
- * Servlet implementation class RegisterController
- */
-@WebServlet("/RegisterController")
-public class RegisterController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+import javax.servlet.http.HttpSession;
 
+/**
+ * Servlet implementation class LoginController
+ */
+@WebServlet("/LoginController")
+public class LoginController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public RegisterController() {
+    public LoginController() {
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -33,19 +37,20 @@ public class RegisterController extends HttpServlet {
 		String password=request.getParameter("password");
 		
 		User u=new User(username,name,email,password);
-		u.setUsername(username);
-		u.setEmail(email);
-		u.setPassword(password);
+		LoginDao ld=new LoginDao();
+		System.out.println("password:"+password);
+		int i=ld.validateUser(u);
 		
-		System.out.println(u.toString());
-		LoginDao e=new LoginDao();
-		int i=e.insertUser(u);
+		HttpSession session=request.getSession();
+		session.setAttribute("username", username);
+		
 		if(i>0) {
-			System.out.println("User inserted");
+			System.out.println("Valid User");
+			response.sendRedirect("Dashboard.jsp");
+		}else {
+			System.out.println("Invalid User");
+			System.out.println("");
 			response.sendRedirect("Login.jsp");
-		}
-		else {
-			System.out.println("User has not inserted");
 		}
 	}
 

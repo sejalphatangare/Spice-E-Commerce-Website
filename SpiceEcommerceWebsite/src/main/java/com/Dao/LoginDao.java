@@ -12,10 +12,11 @@ public class LoginDao {
 		Connection con=MyConnection.getConnection();
 		int i=0;
 		try {
-			PreparedStatement ps=con.prepareStatement("INSERT INTO user() VALUES(?,?,?)");
+			PreparedStatement ps=con.prepareStatement("INSERT INTO user() VALUES(?,?,?,?)");
 			ps.setString(1, u.getUsername());
-			ps.setString(2, u.getEmail());
-			ps.setString(3, u.getPassword());
+			ps.setString(2, u.getName());
+			ps.setString(3, u.getEmail());
+			ps.setString(4, u.getPassword());
 			
 			i=ps.executeUpdate();
 			if(i>0) {
@@ -45,8 +46,8 @@ public int validateUser(User u) {
 		ResultSet rs=ps.executeQuery();
 		
 		if(rs.next()) {
-			System.out.println(u.getPassword()+" "+rs.getString(3));
-			if(u.getPassword().equals(rs.getString(3))) {
+			System.out.println(u.getPassword()+" "+rs.getString(4));
+			if(u.getPassword().equals(rs.getString(4))) {
 				i=1;
 			}
 		}
