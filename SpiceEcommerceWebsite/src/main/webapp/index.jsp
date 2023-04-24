@@ -3,11 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta charset="ISO-8859-1">
-<title>Dashboard</title>
+<title>Insert title here</title>
 </head>
 <body>
-<h1>User has Logged In</h1>
+<h2>ghhjjjk</h2>
 </body>
 </html>

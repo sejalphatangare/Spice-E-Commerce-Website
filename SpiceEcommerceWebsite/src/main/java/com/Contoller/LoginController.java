@@ -50,7 +50,7 @@ public class LoginController extends HttpServlet {
 		}else {
 			System.out.println("Invalid User");
 			System.out.println("");
-			response.sendRedirect("Login.jsp");
+			response.sendRedirect("Register.jsp");
 		}
 	}
 

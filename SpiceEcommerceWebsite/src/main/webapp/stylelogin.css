@@ -31,7 +31,7 @@ a
 }
 .button-box
 {
-	width:220px;
+	width:226px;
 	margin:35px auto;
 	position:relative;
 	box-shadow: 0 0 20px 9px #ff61241f;
@@ -51,7 +51,7 @@ a
 	top: 0;
 	left:0;
 	position: absolute;
-	width: 110px;
+	width: 115px;
 	height: 100%;
 	background: #F3C693;
 	border-radius: 30px;

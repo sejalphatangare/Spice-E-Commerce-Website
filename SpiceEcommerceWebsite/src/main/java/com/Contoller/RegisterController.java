@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import com.Dao.*;
 /**
  * Servlet implementation class RegisterController
@@ -36,17 +38,42 @@ public class RegisterController extends HttpServlet {
 		u.setUsername(username);
 		u.setEmail(email);
 		u.setPassword(password);
-		
 		System.out.println(u.toString());
 		LoginDao e=new LoginDao();
-		int i=e.insertUser(u);
-		if(i>0) {
-			System.out.println("User inserted");
-			response.sendRedirect("Login.jsp");
+		int j=e.checkRegister(u);
+		
+		if(j>0) {
+			HttpSession httpSession = request.getSession();
+			httpSession.setAttribute("message2", "User Already Registered!: "+username);
+			System.out.println("User Already Registered!"+u);
+			response.sendRedirect("Register.jsp");
+//			response.sendRedirect("Login.jsp");
 		}
 		else {
-			System.out.println("User has not inserted");
+			
+			int i=e.insertUser(u);
+			if(i>0) {
+				HttpSession httpSession2 = request.getSession();
+				httpSession2.setAttribute("message", "User successfully Registered!: "+username);
+				System.out.println("User successfully registered"+u);
+				response.sendRedirect("Register.jsp");
+			}else {
+				System.out.println("User Not Registered!");
+			}
+			
 		}
+		
+		
+		
+		
+		
+//		if(i>0) {
+//			System.out.println("User inserted");
+//			response.sendRedirect("Login.jsp");
+//		}
+//		else {
+//			System.out.println("User has not inserted");
+//		}
 	}
 
 	/**
