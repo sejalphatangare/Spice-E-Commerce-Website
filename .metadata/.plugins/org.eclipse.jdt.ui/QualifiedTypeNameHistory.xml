@@ -4,4 +4,6 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="com.Model.User"/>
+    <fullyQualifiedTypeName name="com.Model.Category"/>
+    <fullyQualifiedTypeName name="com.Dao.CategoryDao"/>
 </qualifiedTypeNameHistroy>
