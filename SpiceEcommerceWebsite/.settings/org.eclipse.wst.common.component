@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+<<<<<<< HEAD
         
     <wb-module deploy-name="SpiceEcommerceWebsite">
                 
@@ -10,4 +11,12 @@
             
     </wb-module>
     
+=======
+    <wb-module deploy-name="SpiceEcommerceWebsite">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <property name="context-root" value="SpiceEcommerceWebsite"/>
+        <property name="java-output-path" value="/SpiceEcommerceWebsite/build/classes"/>
+    </wb-module>
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 </project-modules>

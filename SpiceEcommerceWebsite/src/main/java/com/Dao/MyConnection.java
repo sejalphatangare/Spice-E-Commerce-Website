@@ -3,12 +3,15 @@ package com.Dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.sql.SQLException;
 
 public class MyConnection {
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
 	private static final  String url = "jdbc:mysql://localhost:3306/employees";
 =======
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +21,10 @@ import com.Model.User;
 public class MyConnection {
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
 	private static final String url = "jdbc:mysql://localhost:3306/user_spice";
+<<<<<<< HEAD
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 	private static final String uname = "root";
 	private static final String pass="Sejal@2003";
 	
@@ -37,8 +43,11 @@ public class MyConnection {
 		 return con;
 	 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 	public int validateUser(User u) {
 		Connection con=MyConnection.getConnection();
 		int i=0;
@@ -64,7 +73,10 @@ public class MyConnection {
 		}
 		return i;
 	}
+<<<<<<< HEAD
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 	public static void main(String[] args) {
 		Connection con=getConnection();
 		System.out.println(con);

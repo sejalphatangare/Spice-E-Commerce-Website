@@ -13,6 +13,7 @@ public class LoginDao {
 		int i=0;
 		try {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			PreparedStatement ps=con.prepareStatement("INSERT INTO user() VALUES(?,?,?)");
 			ps.setString(1, u.getUsername());
 			ps.setString(2, u.getEmail());
@@ -20,6 +21,8 @@ public class LoginDao {
 			
 			i=ps.executeUpdate();
 =======
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 			PreparedStatement ps=con.prepareStatement("INSERT INTO user() VALUES(?,?,?,?)");
 			ps.setString(1, u.getUsername());
 			ps.setString(2, u.getName());
@@ -28,7 +31,10 @@ public class LoginDao {
 			
 			i=ps.executeUpdate();
 			
+<<<<<<< HEAD
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 			if(i>0) {
 				System.out.println("User Registered");
 			}
@@ -46,7 +52,10 @@ public class LoginDao {
 		return i;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 public int checkRegister(User u) {
 	Connection con=MyConnection.getConnection();
 	int i=0;
@@ -74,7 +83,10 @@ public int checkRegister(User u) {
 	return i;
 	
 }
+<<<<<<< HEAD
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 
 public int validateUser(User u) {
 	Connection con=MyConnection.getConnection();
@@ -87,12 +99,17 @@ public int validateUser(User u) {
 		
 		if(rs.next()) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 			System.out.println(u.getPassword()+" "+rs.getString(3));
 			if(u.getPassword().equals(rs.getString(3))) {
 =======
 			System.out.println(u.getPassword()+" "+rs.getString(4));
 			if(u.getPassword().equals(rs.getString(4))) {
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+			System.out.println(u.getPassword()+" "+rs.getString(4));
+			if(u.getPassword().equals(rs.getString(4))) {
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 				i=1;
 			}
 		}

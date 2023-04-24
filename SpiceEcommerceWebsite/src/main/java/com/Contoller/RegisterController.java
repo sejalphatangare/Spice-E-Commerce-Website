@@ -1,9 +1,13 @@
 package com.Contoller;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import com.Model.*;
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+import com.Model.*;
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,12 +15,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import javax.servlet.http.HttpSession;
 
 import com.Dao.*;
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+import javax.servlet.http.HttpSession;
+
+import com.Dao.*;
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 /**
  * Servlet implementation class RegisterController
  */
@@ -38,7 +48,10 @@ public class RegisterController extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 		String username=request.getParameter("username");
 		String name=request.getParameter("name");
 		String email=request.getParameter("email");
@@ -84,7 +97,10 @@ public class RegisterController extends HttpServlet {
 //		else {
 //			System.out.println("User has not inserted");
 //		}
+<<<<<<< HEAD
 >>>>>>> 2c8e4ea5c63bf2d3981c2e9270c169af1ab3771d
+=======
+>>>>>>> 8a774f8c22274af4ff5d8105df46c4372f979e79
 	}
 
 	/**
