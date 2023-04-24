@@ -12,10 +12,11 @@ public class LoginDao {
 		Connection con=MyConnection.getConnection();
 		int i=0;
 		try {
-			PreparedStatement ps=con.prepareStatement("INSERT INTO user() VALUES(?,?,?)");
+			PreparedStatement ps=con.prepareStatement("INSERT INTO user() VALUES(?,?,?,?)");
 			ps.setString(1, u.getUsername());
-			ps.setString(2, u.getEmail());
-			ps.setString(3, u.getPassword());
+			ps.setString(2, u.getName());
+			ps.setString(3, u.getEmail());
+			ps.setString(4, u.getPassword());
 			
 			i=ps.executeUpdate();		
 			

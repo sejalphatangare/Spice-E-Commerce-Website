@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\jdpha\Downloads"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\jdpha\apache-tomcat-9.0.73-windows-x64 (1)\apache-tomcat-9.0.73\lib"/>
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="NewPackageWizardPage">
@@ -72,5 +72,8 @@
 		<item key="HISTORY_SIZE" value="0"/>
 	</section>
 	<section name="RenameInformationPopup">
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="3"/>
 	</section>
 </section>
