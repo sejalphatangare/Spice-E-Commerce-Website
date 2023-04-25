@@ -80,10 +80,11 @@ a.btn{
 
 .login{
     padding-left: 0px;
+    padding-right: 40px;
 }
 
 .log{
-    padding: 20px 5px 20px 730px;
+    padding: 20px 5px 20px 720px;
 }
 
 .login:hover , .register:hover{
